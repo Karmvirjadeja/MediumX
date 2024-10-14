@@ -5,13 +5,11 @@ import { decode, sign, verify } from "hono/jwt";
 
 export const userRouter = new Hono<{
   Bindings: {
-    data: {
-      DATABASE_URL: string;
-    };
+    DATABASE_URL: string;
   };
 }>();
 
-userRouter.post("/api/v1/signup", async (c) => {
+userRouter.post("/signup", async (c) => {
   const prisma = new PrismaClient({
     datasourceUrl: c.env?.DATABASE_URL,
   }).$extends(withAccelerate());
@@ -33,7 +31,7 @@ userRouter.post("/api/v1/signup", async (c) => {
     return c.json({ error: "error while signing up" });
   }
 });
-userRouter.post("api/v1/signin", async (c) => {
+userRouter.post("/signin", async (c) => {
   const prisma = new PrismaClient({
     datasourceUrl: c.env.DATABASE_URL,
   }).$extends(withAccelerate());
