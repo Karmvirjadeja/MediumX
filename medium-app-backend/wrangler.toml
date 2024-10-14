@@ -1,27 +1,6 @@
 name = "medium-app"
 main = "src/index.ts"
 compatibility_date = "2024-10-13"
-compatibility_flags = [ "nodejs_compat" ]
 
-# [vars]
-# MY_VAR = "my-variable"
-
-# [[kv_namespaces]]
-# binding = "MY_KV_NAMESPACE"
-# id = "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
-
-# [[r2_buckets]]
-# binding = "MY_BUCKET"
-# bucket_name = "my-bucket"
-
-# [[d1_databases]]
-# binding = "DB"
-# database_name = "my-database"
-# database_id = ""
-
-# [ai]
-# binding = "AI"
-
-# [observability]
-# enabled = true
-# head_sampling_rate = 1
+[vars]
+DATABASE_URL="prisma://accelerate.prisma-data.net/?api_key=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhcGlfa2V5IjoiN2IzNjY2NWUtZmQ3ZC00MmQ5LTkzMjUtYmE3NmIwYzgwOGQ5IiwidGVuYW50X2lkIjoiZmZiMTI4ZDhlZTQ2Y2Y2NGU4NWI1NjZkMzc0YTZmZDgyYjIxYjZhNzhlNGRkNjAzNzkzNjdkNGIyODBjZjkyNiIsImludGVybmFsX3NlY3JldCI6ImM2NzIxM2E0LWI4ZjEtNDkyYi04ODVkLWZiMmMxMTY5MWY1MSJ9.W7DWABfaveNnG68P1UXF2f87xCOFcTclgvbeYj6gnzI"
